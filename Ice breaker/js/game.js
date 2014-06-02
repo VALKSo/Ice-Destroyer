@@ -70,7 +70,7 @@ Alien.prototype.step = function(dt) {
     }
     this.x += this.mx;
     this.mx = 0;
-    this.frame = (this.frame+1) % 3;
+    this.frame = (this.frame+1) % 1;
     if(this.x > Game.width - Sprites.map.alien1.w * 2) this.flock.hit = -1;
     if(this.x < Sprites.map.alien1.w) this.flock.hit = 1;
   }
@@ -109,7 +109,7 @@ Player.prototype.step = function(dt) {
 
   if(this.x < 0) this.x = 0;
   if(this.x > Game.width-this.w) this.x = Game.width-this.w;
-   this.frame = (this.frame+1) % 3;
+   this.frame = (this.frame+1) % 1;
   this.reloading--;
 
   if(Game.keys['fire'] && this.reloading <= 0 && this.board.missiles < 3) {
@@ -130,7 +130,7 @@ var Missile = function Missile(opts) {
 }
 
 Missile.prototype.draw = function(canvas) {
-   Sprites.draw(canvas,'missile',this.x,this.y);
+   Sprites.draw(canvas,'missile',this.x,this.y + 40);
 }
 
 Missile.prototype.step = function(dt) {
