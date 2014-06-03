@@ -51,9 +51,9 @@ console.log(rnd());
   function startGame() {
      
 
-    var screen = new GameScreen(" "," ",
+    var screen = new GameScreen("HIT SPACE"," ",
                                  function() {
-                                      $('#gameboard').css('background-image', 'url("images/aloneinspace.png")');
+                                      $('#gameboard').css('background-image', 'url("images/bckgr.png")');
                                      Game.loadBoard(new GameBoard(1));
                                  });
     Game.loadBoard(screen);
