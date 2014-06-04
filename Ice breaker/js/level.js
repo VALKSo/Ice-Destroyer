@@ -67,7 +67,7 @@ console.log(rnd());
     var screen = new GameScreen("HIT SPACE"," ",
                                  function() {
                                       $('#gameboard').css('background-image', 'url("images/bckgr.png")');
-									                                       Game.loadBoard(new GameBoard(1));
+									  	Game.loadBoard(new GameBoard(1));
                                  });
     Game.loadBoard(screen);
     Game.loop();

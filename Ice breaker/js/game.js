@@ -74,6 +74,9 @@ Alien.prototype.step = function(dt) {
     this.frame = (this.frame+1) % 1;
     if(this.x > Game.width - Sprites.map.alien1.w * 2) this.flock.hit = -1;
     if(this.x < Sprites.map.alien1.w) this.flock.hit = 1;
+ 	 if(this.y > (Game.height - 20) - Sprites.map.alien1.h * 2) {
+		 Game.callbacks['die'](); 
+   }
   }
   return true;
 }
