@@ -55,8 +55,8 @@ console.log(rnd());
     'alien1': { sx: 5,  sy: 4,  w: 29, h: 20, cls: Alien, frames: 1 },
     'alien2': { sx: 34,  sy: 4, w: 29, h: 20, cls: Alien, frames: 1 },
     'alien3': { sx: 44,  sy: 32, w: 17, h: 9, cls: Alien, frames: 1 },
-    'player': { sx: 8,  sy: 36, w: 26, h: 50, cls: Player, frames: 1 },
-    'missile': { sx: 55,  sy: 53, w: 8,  h: 8, cls: Missile }
+    'player': { sx: 0,  sy: 45, w: 69, h: 49, cls: Player, frames: 1 },
+    'missile': { sx: 69,  sy: 62, w: 8,  h: 8, cls: Missile }
   }
 
   function startGame() {
