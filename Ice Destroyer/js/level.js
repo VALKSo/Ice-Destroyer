@@ -64,7 +64,7 @@ console.log(rnd());
   function startGame() {
      
 
-    var screen = new GameScreen("HIT SPACE"," ",
+    var screen = new GameScreen(" ","PRESS ENTER",
                                  function() {
                                       $('#gameboard').css('background-image', 'url("images/bckgr.png")');
 									  	Game.loadBoard(new GameBoard(1));
@@ -75,7 +75,7 @@ console.log(rnd());
   }
 
   function endGame() {
-    var screen = new GameScreen("Game Over","Press space to restart",
+    var screen = new GameScreen("GAME OVER","Press enter to restart!",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
                                  });
@@ -84,7 +84,7 @@ console.log(rnd());
 
 
   function winGame() {
-    var screen = new GameScreen("You Win!","(press space to restart)",
+    var screen = new GameScreen("You Win!","(Press enter to play again!)",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));									 
                                  });
