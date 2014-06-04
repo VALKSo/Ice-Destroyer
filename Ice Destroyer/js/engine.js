@@ -54,11 +54,11 @@ var GameScreen = function GameScreen(text,text2,callback) {
 
   this.render = function(canvas) {
     canvas.clearRect(0,0,Game.width,Game.height);
-    canvas.font = "bold 35px Segoe UI";
+    canvas.font = "bold 20px Segoe UI";
     var measure = canvas.measureText(text2);  
     canvas.fillStyle = "#FFFFFF";
     canvas.fillText(text2,Game.width/2 - measure.width/2,Game.height -10);
-    canvas.font = "bold 20px Segoe UI";
+    canvas.font = "bold 35px Segoe UI";
     var measure2 = canvas.measureText(text);
     canvas.fillText(text,Game.width/2 - measure2.width/2,Game.height/2 + 40);
 
@@ -115,7 +115,7 @@ var GameBoard = function GameBoard(level_number) {
     this.iterate(function() { this.draw(canvas); });
 
     var scoretext = "Score: " + this.score;
-    canvas.font="20px Segoe UI";
+    canvas.font="bold 24px Segoe UI";
     canvas.fillText(scoretext,10,50);
   };
 
