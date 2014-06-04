@@ -66,7 +66,7 @@ Alien.prototype.step = function(dt) {
   this.y += this.flock.dy;
   if(Math.abs(this.mx) > 10) {
     if(this.y == this.flock.max_y[this.x]) {
-      this.fireSometimes();
+     // this.fireSometimes();
     }
     this.x += this.mx;
     this.mx = 0;
@@ -77,7 +77,7 @@ Alien.prototype.step = function(dt) {
   return true;
 }
 
-Alien.prototype.fireSometimes = function() {
+	Alien.prototype.fireSometimes = function() {
       if(Math.random()*100 < 10) {
         this.board.addSprite('missile',this.x + this.w/2 - Sprites.map.missile.w/2,
                                       this.y + this.h, 
