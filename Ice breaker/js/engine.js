@@ -137,7 +137,7 @@ var GameBoard = function GameBoard(level_number) {
     this.objects = [];
     this.player = this.addSprite('player', // Sprite
                                  Game.width/2, // X
-                                 Game.height - Sprites.map['player'].h - 10); // Y
+                                 Game.height - Sprites.map['player'].h - 1); // Y
 
     var flock = this.add(new AlienFlock());
     for(var y=0,rows=level.length;y<rows;y++) {
