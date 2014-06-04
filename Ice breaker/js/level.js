@@ -32,24 +32,24 @@ console.log(rnd());
           [0,0,0,0,3,3,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
-          [0,0,3,3,3,3,3,3,3,0,0],
+          [0,0,0,3,3,3,3,3,0,0,0],
           [0,0,2,2,2,2,2,2,2,0,0],
           [0,0,2,2,2,2,2,2,2,0,0],
-          [0,0,1,1,1,1,1,1,1,0,0],
-          [0,0,1,1,1,1,1,1,1,0,0],
-          [0,0,1,1,1,1,1,1,1,0,0],
-          [0,0,1,1,1,1,1,1,1,0,0]],
+          [0,0,0,1,1,1,1,1,0,0,0],
+          [0,0,0,1,1,1,1,1,0,0,0],
+          [0,0,0,1,1,1,1,1,0,0,0],
+          [0,0,0,1,1,1,1,1,0,0,0]],
      4:	  [[0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,3,3,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
-          [3,3,3,3,3,3,3,3,3,3,3],
-          [0,0,2,2,2,2,2,2,2,2,0],
-          [0,0,2,2,2,2,2,2,2,2,0],
-          [0,0,1,1,1,1,1,1,1,1,0],
-          [0,0,1,1,1,1,1,1,1,1,0],
-          [0,0,1,1,1,1,1,1,1,1,0],
-          [0,0,1,1,1,1,1,1,1,1,0]]
+          [0,0,0,3,0,0,3,0,0,0,0],
+          [0,0,2,2,2,2,2,2,2,0,0],
+          [0,0,2,2,0,2,0,2,2,0,0],
+          [0,0,0,1,1,0,1,1,1,0,0],
+          [0,0,0,1,1,1,1,1,1,0,0],
+          [0,0,0,1,1,0,1,1,1,0,0],
+          [0,0,0,1,1,0,1,1,0,0,0]]
   };
 
   var spriteData = {
@@ -68,13 +68,14 @@ console.log(rnd());
                                  function() {
                                       $('#gameboard').css('background-image', 'url("images/bckgr.png")');
 									  	Game.loadBoard(new GameBoard(1));
+									    GameAudio.play('arr');
                                  });
     Game.loadBoard(screen);
     Game.loop();
   }
 
   function endGame() {
-    var screen = new GameScreen("Game Over","(press space to restart)",
+    var screen = new GameScreen("Game Over","Press space to restart",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
                                  });
@@ -85,13 +86,13 @@ console.log(rnd());
   function winGame() {
     var screen = new GameScreen("You Win!","(press space to restart)",
                                  function() {
-                                     Game.loadBoard(new GameBoard(1));
+                                     Game.loadBoard(new GameBoard(1));									 
                                  });
     Game.loadBoard(screen);
   }
 
   $(function() {
-    GameAudio.load({ 'fire' : 'media/cannon.ogg', 'die' : 'media/explosion.ogg' }, 
+    GameAudio.load({ 'fire' : 'media/cannon.ogg', 'die' : 'media/xplode.ogg', 'arr' : 'media/arr.ogg' }, 
                    function() { 
                        Game.initialize("#gameboard", levelData, spriteData,
                                       { "start": startGame,

@@ -12,7 +12,7 @@ var AlienFlock = function AlienFlock() {
       Game.loadBoard(new GameBoard(Game.board.nextLevel())); 
     } else {
       Game.callbacks['win']();
-    }
+	  }
   }
 
   this.step = function(dt) { 
