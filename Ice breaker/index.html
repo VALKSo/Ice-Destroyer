@@ -1,36 +1,69 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Ice Breaker</title>
-  
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
-  <script src='js/engine.js'></script>
-  <script src='js/game.js'></script>
-  <script src='js/level.js'></script>
 
-  <style>
-      #gameboard {
-                background:url("images/splash2.png"); 
-      }
-      
-      #game-wrapper { 
-                margin:auto; width: 700px; 
-      }
-	  
-	  body {
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ice Breaker</title>
+<head>
+    
+    
+    <style>
+      #gameboard
+        {      
+              margin: auto; width: 700px;
+              background:url("images/splash2.png"); }
+    
+    #button {
+	position: absolute;
+	visibility: visible;
+	margin: auto;
+    top: 10px;
+    left: 5px;
+}
+	#button2 {
+	position: absolute;
+	visibility: visible;
+	margin: auto;   
+    top:10px;
+    right:5px;
+	}
+    
+    #wrapper {
+    position: relative;
+    margin:auto;
+    width: 700px;
+    }
+		 body {
 		  		background-color:#6d6e6f;
-	   	  
 	  }
-	  
-  </style>
+    </style>
     
 </head>
+    
 <body>
-	
-      <div id='game-wrapper'>
-    <canvas id='gameboard' width='700' height='500'></canvas>
-  </div>
-	
-  </body>
+    <div id= 'wrapper'>
+        <div id= 'button'><a href="howto.html"><img src="images/how.gif"> </a></div>
+      <canvas id='gameboard' width='700' height='500' ></canvas>
+      <div id= 'button2'><a href="game.html"><img src="images/play.gif"> </a></div>
+    </div>
+    
+    
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
