@@ -53,12 +53,12 @@ console.log(rnd());
   };
 
   var spriteData = {
-    'alien1': { sx: 37,  sy: 3,  w: 49, h: 33, cls: Alien, frames: 1 },
-    'alien2': { sx: 76,  sy: 64, w: 48, h: 28, cls: Alien, frames: 1 },
-    'alien3': { sx: 132,  sy: 57, w: 50, h: 37, cls: Alien, frames: 1 },
-	'alien4': { sx: 92,  sy: 23, w: 37, h: 13, cls: Alien, frames: 1 },
+    'iceberg1': { sx: 37,  sy: 3,  w: 49, h: 33, cls: Iceberg, frames: 1 },
+    'iceberg2': { sx: 76,  sy: 64, w: 48, h: 28, cls: Iceberg, frames: 1 },
+    'iceberg3': { sx: 132,  sy: 57, w: 50, h: 37, cls: Iceberg, frames: 1 },
+	'iceberg4': { sx: 92,  sy: 23, w: 37, h: 13, cls: Iceberg, frames: 1 },
     'player': { sx: 0,  sy: 45, w: 69, h: 49, cls: Player, frames: 1 },
-    'missile': { sx: 69,  sy: 62, w: 8,  h: 8, cls: Missile }
+    'projectile': { sx: 69,  sy: 62, w: 8,  h: 8, cls: Projectile }
   }
 
   function startGame() {
@@ -84,7 +84,7 @@ console.log(rnd());
 
 
   function winGame() {
-    var screen = new GameScreen("You Win!","(Press enter to play again!)",
+    var screen = new GameScreen("You Win!","(Press Enter to play again!)",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));									 
                                  });

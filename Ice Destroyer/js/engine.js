@@ -68,7 +68,7 @@ var GameScreen = function GameScreen(text,text2,callback) {
 var GameBoard = function GameBoard(level_number) {
   this.score = 0;
   this.removed_objs = [];
-  this.missiles = 0;
+  this.projectiles = 0;
   this.level = level_number;
   var board = this;
 
@@ -138,14 +138,14 @@ var GameBoard = function GameBoard(level_number) {
                                  Game.width/2, // X
                                  Game.height - Sprites.map['player'].h - 1); // Y
 
-    var flock = this.add(new AlienFlock());
+    var flock = this.add(new IcebergFlock());
     for(var y=0,rows=level.length;y<rows;y++) {
       for(var x=0,cols=level[y].length;x<cols;x++) {
-        var alien = Sprites.map['alien' + level[y][x]];
-        if(alien) { 
-          this.addSprite('alien' + level[y][x], // Which Sprite
-                         (alien.w+10)*x,  // X
-                         alien.h*y,       // Y
+        var iceberg = Sprites.map['iceberg' + level[y][x]];
+        if(iceberg) { 
+          this.addSprite('iceberg' + level[y][x], // Which Sprite
+                         (iceberg.w+10)*x,  // X
+                         iceberg.h*y,       // Y
                          { flock: flock }); // Options
         }
       }
